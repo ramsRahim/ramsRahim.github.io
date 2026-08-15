@@ -98,6 +98,33 @@
                 <hr>
                 <div class='row'>
                     <div class='col-12 mt-4'>
+                        <h3>Region-Level Retrieval with Frozen Vision-Language Backbones</h3>
+                    </div>
+                    <!-- To add a figure, wrap the text below in <div class='col-8'> and put the image in
+                         <div class='col-4'><img class="rounded shadow img-fluid border" src="/assets/img_papers/FIGURE.png"></div> -->
+                    <div class='col-12'>
+                        How much localized, region-level retrieval ability is already latent in a frozen vision-language backbone, before any gradient updates?
+                        We introduce TIP-REGION, a training-free paired-exemplar method that consistently improves region-level retrieval across three heterogeneous backbones: CLIP, SigLIP2, and Qwen3-VL-Embedding.
+                        Beyond the method itself, we work on making evaluation in this space more reliable. A support-set contamination audit uncovered and corrected a subtle data-leakage issue in a public RefCOCOg mirror, and we introduce LOCFG, a leakage-controlled benchmark for small-referent retrieval.
+                        In a closely related line of work, we fine-tune a BLIP model with visual-grounding late interaction on eBay Fashion data. Preserving localized visual evidence at scoring time lets the model capture fine-grained fashion attributes rather than relying on a single whole-image embedding, giving substantial improvements over the existing retrieval model.
+                        This work was carried out during an Applied Research internship at eBay, and gave me hands-on experience running large-scale experiments on industry compute clusters.
+                    </div>
+
+                    <div class='col-12 mt-4'>
+                        <h3>MM++: Unsupervised Post-Hoc Out-of-Distribution Detection</h3>
+                    </div>
+                    <!-- To add a figure, wrap the text below in <div class='col-8'> and put the image in
+                         <div class='col-4'><img class="rounded shadow img-fluid border" src="/assets/img_papers/FIGURE.png"></div> -->
+                    <div class='col-12'>
+                        Deep networks are often confidently wrong on inputs that fall outside their training distribution, and most remedies for this ask for something extra: auxiliary OOD data, a fine-tuned classifier, or a change to the architecture.
+                        We introduce MM++ (Multilayer Mahalanobis++), a fully unsupervised, strictly post-hoc, and scale-invariant framework for Out-of-Distribution (OOD) detection.
+                        To address the trade-off between scale invariance and hierarchical expressivity, MM++ constructs a principled joint feature space. It first identifies discriminative intermediate layers by measuring entropy density drops, which mark the boundaries of sharp semantic compression.
+                        By fusing these selected layers with the terminal representation, the framework captures latent cross-layer correlations while mitigating early-layer noise.
+                        Crucially, a Ledoit-Wolf regularized tied covariance matrix stabilizes this unified space, enabling reliable distance estimation.
+                        Requiring no auxiliary OOD data, no classifier fine-tuning, and no architectural modification, MM++ delivers robust performance across distinct architectures for both near- and far-OOD detection.
+                    </div>
+
+                    <div class='col-12 mt-4'>
                         <h3>Efficient Test Time Adaptation</h3>
                     </div>
                     <div class='col-4'>
