@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html class="h-100">
     <head>
+        <meta charset="utf-8">
         <title>Home | Rahim Hossain</title>
         <link rel="icon" type="image/icon" href="assets/img_misc/logo.png">
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
@@ -13,6 +14,8 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="/assets/styles/site.css">
     </head>
 
     <body class="d-flex flex-column h-100">
@@ -85,53 +88,45 @@
             <div class="row">
 
                 <div class="col-md-2 col-sm-3 col-xs-3 mt-4">
-                    <img class="rounded shadow img-fluid" src="/assets/img_people/profile.png" data-holder-rendered="true">
+                    <img class="hero-photo img-fluid" src="/assets/img_people/profile.png" alt="Rahim Hossain" data-holder-rendered="true">
                 </div>
 
                 <div class="col-md-10 col-sm-9 col-xs-6 mt-2 pt-3">
-                    <!-- <hr> -->
                     <h1>Rahim Hossain</h1>
-                    <p class="lead">
+                    <p class="hero-meta">
                         PhD in School of Computing<br>
-                        Binghamton University (SUNY)<br>
+                        <strong>Binghamton University (SUNY)</strong><br>
                         Research Assistant at RTLab<br>
-                        Binghamton , NY , 13902
-
-                        <table>
-                            <tr>
-                                <td>
-                                    <a href="https://scholar.google.com/citations?user=2tQEau0AAAAJ&hl=en" target="_blank">
-                                        <span class="ai ai-google-scholar-square ai-2x" style="color:rgb(58, 57, 57);"></span>
-                                    </a>
-                                    <span style="margin-right: 20px;"></span>
-                                </td>
-                                <td>
-                                    <a href="https://github.com/ramsRahim" target="_blank">
-                                    <i class="fab fa-github" style="font-size: 32px; color:rgb(58, 57, 57);"></i>
-                                    </a>
-                                    <span style="margin-right: 20px;"></span>
-                                </td>
-                                <td>
-                                    <a href="https://www.linkedin.com/in/ramsrahim/" target="_blank">
-                                        <i class="fab fa-linkedin" style="font-size: 32px; color:rgb(58, 57, 57);"></i>
-                                    </a>
-                                    <span style="margin-right: 20px;"></span>
-                                </td>
-                                <td>
-                                    <a href="https://twitter.com/ramsRahim" target="_blank">
-                                        <img src="assets/img_misc/twitter_logo1.png" width="26" height="24">
-                                    </a>
-                                    <span style="margin-right: 20px;"></span>
-                                </td>
-                                <td>
-                                    <a href="https://www.researchgate.net/profile/Rahim-Hossain-3" target="_blank">
-                                        <i class="fab fa-researchgate" style="font-size: 32px; color:rgb(58, 57, 57);"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                        </table>
+                        Binghamton, NY 13902
                     </p>
-                    
+
+                    <ul class="social-links">
+                        <li>
+                            <a href="https://scholar.google.com/citations?user=2tQEau0AAAAJ&hl=en" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar">
+                                <span class="ai ai-google-scholar-square" aria-hidden="true"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/ramsRahim" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/ramsrahim/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/ramsRahim" target="_blank" rel="noopener" title="Twitter" aria-label="Twitter">
+                                <img src="/assets/img_misc/twitter_logo1.png" alt="" aria-hidden="true">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.researchgate.net/profile/Rahim-Hossain-3" target="_blank" rel="noopener" title="ResearchGate" aria-label="ResearchGate">
+                                <i class="fab fa-researchgate" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 
             </div>
@@ -182,7 +177,7 @@
 
             <hr>
             <h2>Recent News</h2>
-            <div class="mb-5">
+            <div class="news mb-5">
                 <h5>August 2026</h5>
                 <p class="mx-2">Wrapped up my summer as an <b>Applied Research Intern</b> at <b>eBay</b>. We introduced <b>TIP-REGION</b>, a training-free paired-exemplar method that consistently improves region-level retrieval across three heterogeneous frozen backbones (<b>CLIP</b>, <b>SigLIP2</b>, and <b>Qwen3-VL-Embedding</b>), together with <b>LOCFG</b>, a leakage-controlled benchmark for small-referent retrieval; the paper is being prepared for submission to <b>ICLR</b>. I also fine-tuned a <b>BLIP</b> model with visual-grounding late interaction on eBay Fashion data, substantially improving over the existing retrieval model.
                 </p>
@@ -195,56 +190,35 @@
 
                 <h5>June 2025</h5>
                 <p class="mx-2">Our paper accepted in <b>Sensors</b> titled <b>"TDA-L: Reducing Latency and Memory Consumption of Test-Time Adaptation for Real-Time Intelligent Sensing"</b>.
+                </p>
                 <h5>November 2024</h5>
                 <p class="mx-2">Our team secured second runner-up in the eBay ML 2024 competition, where we developed a solution for extracting vehicle fitment from advertised data using LLMs such as Mistral Nemo 12B and Qwen 2.5 14B.
                 </p>
                 <h5>August 2024</h5>
                 <p class="mx-2">Started my PhD in <b>Binghamton University (SUNY)</b> at <b>school of computing</b> under the supervision of <b>Prof. Kyoung-Don Kang</b>.
+                </p>
                 <h5>May 2024</h5>
-                <p class="mx-2"> Defended my Master's thesis titled <b>"A DNN for Detecting Spotted Lanternflies Using Energy Efficient WAN"</b> at <b>Binghamton University (SUNY)</b>.
-                
+                <p class="mx-2">Defended my Master's thesis titled <b>"A DNN for Detecting Spotted Lanternflies Using Energy Efficient WAN"</b> at <b>Binghamton University (SUNY)</b>.
+                </p>
                 <h5>December 2023</h5>
                 <p class="mx-2">Our team secured second runner-up in the eBay ML 2023 competition, where we developed a semi-supervised teacher-student framework to enhance product tag tiling performance using RoBERTa.
                 </p>
                 
                 <h5>August 2023</h5>
                 <p class="mx-2">Our paper accepted in <b>ICCV 2023</b> titled <b>"SSDA: Secure Source-Free Domain Adaptation"</b>.
-                
+                </p>
                 <h5>May 2023</h5>
                 <p class="mx-2">Joined <b>Binghamton University (SUNY)</b> as a <b>Research Assistant</b>.
-
+                </p>
                 <h5>March 2022</h5>
                 <p class="mx-2">Joined <b>Cobalt Speech and Language</b> as a <b>Research Scientist</b>.
-
+                </p>
                 <h5>July 2021</h5>
                 <p class="mx-2">Our paper accepted in <b>IJCNN 2021</b> titled <b>"Dynamic perturbation of weights for improved data reconstruction in unsupervised learning"</b>.
-                
+                </p>
                 <h5>April 2021</h5>
                 <p class="mx-2">My paper accepted in <b>I2CT 2021</b> titled <b>"A hybrid clustering pipeline for mining baseline local patterns in 3d point cloud"</b>.
-                <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Launch demo modal
-                  </button> -->
-
-                <!-- Modal -->
-                <div class="modal fade" id="feb-2022-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                        <!-- <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div> -->
-                        <div class="modal-body mb-2 p-2">
-                            <img class="rounded shadow img-fluid" src="/assets/img_people/arin_feb2022.png" data-holder-rendered="true">
-                        </div>
-                        <div class="modal-footer">
-                            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-
-
+                </p>
             </div>
 
         </div> <!-- end container -->

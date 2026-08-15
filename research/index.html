@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="h-100">
     <head>
-        <title>Home | Rahim Hossain</title>
+        <meta charset="utf-8">
+        <title>Research | Rahim Hossain</title>
         <link rel="icon" type="image/icon" href="../assets/img_misc/logo.png">
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -13,6 +14,8 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="/assets/styles/site.css">
     </head>
     <body class="d-flex flex-column h-100">
 
@@ -96,26 +99,27 @@
                     Introduction to IoT course, I evolved the project, now named "Third Eye," by integrating continuous connectivity using LoRa technology.</p>
 
                 <hr>
-                <div class='row'>
-                    <div class='col-12 mt-4'>
-                        <h3>Region-Level Retrieval with Frozen Vision-Language Backbones</h3>
-                    </div>
-                    <!-- To add a figure, wrap the text below in <div class='col-8'> and put the image in
-                         <div class='col-4'><img class="rounded shadow img-fluid border" src="/assets/img_papers/FIGURE.png"></div> -->
-                    <div class='col-12'>
+
+                <article class="project">
+                    <h3>Region-Level Retrieval with Frozen Vision-Language Backbones</h3>
+                    <!-- To add a figure, wrap this body in the two-column form used by the
+                         cards below: <div class="row g-4 align-items-start"> with a
+                         <div class="col-md-4 project-figure"><img src="..." alt=""></div>. -->
+                    <div class="project-body">
                         How much localized, region-level retrieval ability is already latent in a frozen vision-language backbone, before any gradient updates?
                         We introduce TIP-REGION, a training-free paired-exemplar method that consistently improves region-level retrieval across three heterogeneous backbones: CLIP, SigLIP2, and Qwen3-VL-Embedding.
                         Beyond the method itself, we work on making evaluation in this space more reliable. A support-set contamination audit uncovered and corrected a subtle data-leakage issue in a public RefCOCOg mirror, and we introduce LOCFG, a leakage-controlled benchmark for small-referent retrieval.
                         In a closely related line of work, we fine-tune a BLIP model with visual-grounding late interaction on eBay Fashion data. Preserving localized visual evidence at scoring time lets the model capture fine-grained fashion attributes rather than relying on a single whole-image embedding, giving substantial improvements over the existing retrieval model.
                         This work was carried out during an Applied Research internship at eBay, and gave me hands-on experience running large-scale experiments on industry compute clusters.
                     </div>
+                </article>
 
-                    <div class='col-12 mt-4'>
-                        <h3>MM++: Unsupervised Post-Hoc Out-of-Distribution Detection</h3>
-                    </div>
-                    <!-- To add a figure, wrap the text below in <div class='col-8'> and put the image in
-                         <div class='col-4'><img class="rounded shadow img-fluid border" src="/assets/img_papers/FIGURE.png"></div> -->
-                    <div class='col-12'>
+                <article class="project">
+                    <h3>MM++: Unsupervised Post-Hoc Out-of-Distribution Detection</h3>
+                    <!-- To add a figure, wrap this body in the two-column form used by the
+                         cards below: <div class="row g-4 align-items-start"> with a
+                         <div class="col-md-4 project-figure"><img src="..." alt=""></div>. -->
+                    <div class="project-body">
                         Deep networks are often confidently wrong on inputs that fall outside their training distribution, and most remedies for this ask for something extra: auxiliary OOD data, a fine-tuned classifier, or a change to the architecture.
                         We introduce MM++ (Multilayer Mahalanobis++), a fully unsupervised, strictly post-hoc, and scale-invariant framework for Out-of-Distribution (OOD) detection.
                         To address the trade-off between scale invariance and hierarchical expressivity, MM++ constructs a principled joint feature space. It first identifies discriminative intermediate layers by measuring entropy density drops, which mark the boundaries of sharp semantic compression.
@@ -123,96 +127,114 @@
                         Crucially, a Ledoit-Wolf regularized tied covariance matrix stabilizes this unified space, enabling reliable distance estimation.
                         Requiring no auxiliary OOD data, no classifier fine-tuning, and no architectural modification, MM++ delivers robust performance across distinct architectures for both near- and far-OOD detection.
                     </div>
+                </article>
 
-                    <div class='col-12 mt-4'>
-                        <h3>Efficient Test Time Adaptation</h3>
+                <article class="project">
+                    <h3>Efficient Test Time Adaptation</h3>
+                    <div class="row g-4 align-items-start">
+                        <div class="col-md-4 project-figure">
+                            <img src="/assets/img_papers/tda-l(v4).drawio.png" alt="TDA-L architecture diagram" data-holder-rendered="true">
+                        </div>
+                        <div class="col-md-8 project-body">
+                            Vision–language models learn visual concepts from the supervision of natural language.
+                            It can significantly enhance the generalizability of real-time intelligent sensing, such as analyzing camera-captured real-time images for visually impaired users.
+                            However, adapting vision–language models to distribution shifts at test time, caused by several factors such as lighting or weather changes, remains challenging.
+                            In particular, most existing test-time adaptation methods rely on gradient-based fine-tuning and backpropagation, making them computationally expensive and unsuitable for real-time applications.
+                            To address this challenge, the Training-Free Dynamic Adapter (TDA) has recently been introduced as a lightweight alternative that uses a dynamic key–value cache and pseudo-label refinement for test-time adaptation without backpropagation.
+                            Building on this, we propose TDA-L, a new framework that integrates Low-Rank Adaptation (LoRA) to reduce the size of feature representations and related computational overhead at test time using pre-learned low-rank matrices.
+                            TDA-L applies LoRA transformations to both query and cached features during inference, cost-efficiently improving robustness to distribution shifts while maintaining the training-free nature of TDA.
+                            Experimental results on seven benchmarks show that TDA-L maintains accuracy but achieves lower latency, less memory consumption, and higher throughput, making it well-suited for AI-based real-time sensing.
+                        </div>
                     </div>
-                    <div class='col-4'>
-                        <img class="rounded shadow img-fluid border" src="/assets/img_papers/tda-l(v4).drawio.png" data-holder-rendered="true">
-                    </div>
-                    <div class='col-8'>
-                        Vision–language models learn visual concepts from the supervision of natural language.
-                        It can significantly enhance the generalizability of real-time intelligent sensing, such as analyzing camera-captured real-time images for visually impaired users. 
-                        However, adapting vision–language models to distribution shifts at test time, caused by several factors such as lighting or weather changes, remains challenging. 
-                        In particular, most existing test-time adaptation methods rely on gradient-based fine-tuning and backpropagation, making them computationally expensive and unsuitable for real-time applications. 
-                        To address this challenge, the Training-Free Dynamic Adapter (TDA) has recently been introduced as a lightweight alternative that uses a dynamic key–value cache and pseudo-label refinement for test-time adaptation without backpropagation. 
-                        Building on this, we propose TDA-L, a new framework that integrates Low-Rank Adaptation (LoRA) to reduce the size of feature representations and related computational overhead at test time using pre-learned low-rank matrices. 
-                        TDA-L applies LoRA transformations to both query and cached features during inference, cost-efficiently improving robustness to distribution shifts while maintaining the training-free nature of TDA. 
-                        Experimental results on seven benchmarks show that TDA-L maintains accuracy but achieves lower latency, less memory consumption, and higher throughput, making it well-suited for AI-based real-time sensing.
-                    </div>
+                </article>
 
-                <div class='row'>
-                    <div class='col-12 mt-4'>
-                        <h3>A DNN for Detecting Spotted Lanternflies Using Energy Efficient WAN</h3>
+                <article class="project">
+                    <h3>A DNN for Detecting Spotted Lanternflies Using Energy Efficient WAN</h3>
+                    <div class="row g-4 align-items-start">
+                        <div class="col-md-4 project-figure">
+                            <img src="/assets/img_papers/SLF.png" alt="Spotted Lanternfly detection system" data-holder-rendered="true">
+                        </div>
+                        <div class="col-md-8 project-body">
+                            Detecting invasive species like the Spotted Lanternfly (SLF) in remote and hard-to-reach places such as tree
+                            branches or tall building walls is labor-intensive and leads to significant crop
+                            losses. To tackle this, we developed a new system, a Deep Neural Network (DNN)
+                            architecture that incorporates MobileNet V3, optimized for low-power devices and
+                            trained on a dedicated SLF dataset. Deployed on a Raspberry Pi Model B with a
+                            LoRa module, our system is energy-efficient and operates effectively on edge devices
+                            with limited computational resources through quantization, achieving high accuracy
+                            and low latency for detection. Our results demonstrate that our system covers a
+                            larger area and consumes significantly less power than other network technologies
+                            such as WiFi and Bluetooth, making it a superior solution for managing invasive
+                            species in expansive, resource-limited environments
+                        </div>
                     </div>
-                    <div class='col-4'>
-                        <img class="rounded shadow img-fluid border" src="/assets/img_papers/SLF.png" data-holder-rendered="true">
-                    </div>
-                    <div class='col-8'>
-                        Detecting invasive species like the Spotted Lanternfly (SLF) in remote and hard-to-reach places such as tree
-                        branches or tall building walls is labor-intensive and leads to significant crop
-                        losses. To tackle this, we developed a new system, a Deep Neural Network (DNN)
-                        architecture that incorporates MobileNet V3, optimized for low-power devices and
-                        trained on a dedicated SLF dataset. Deployed on a Raspberry Pi Model B with a
-                        LoRa module, our system is energy-efficient and operates effectively on edge devices
-                        with limited computational resources through quantization, achieving high accuracy
-                        and low latency for detection. Our results demonstrate that our system covers a
-                        larger area and consumes significantly less power than other network technologies
-                        such as WiFi and Bluetooth, making it a superior solution for managing invasive
-                        species in expansive, resource-limited environments
-                    </div>
-                    <div class='col-12 mt-4'>
-                        <h3>Adaptive Real Time Object Detection using advance optical flow algorithm</h3>
-                    </div>
-                    <div class='col-4'>
-                        <img class="rounded shadow img-fluid border" src="/assets/img_papers/traffic.jpg" data-holder-rendered="true">
-                    </div>
-                    <div class='col-8'>
-                        We are developing a real-time object detection system that can adapt to changes in the environment. We are using optical flow to detect changes in the environment, and then using this information to adapt the object detection model to the new environment.
-                    </div>
-                    <div class='col-12 mt-4'>
-                        <h3>Investigating Linear Neural Network’s Vulnerability</h3>
-                    </div>
-                    <div class='col-4'>
-                        <img class="rounded shadow img-fluid border" src="/assets/img_papers/neural_networks_comparison.png" data-holder-rendered="true">
-                    </div>
-                    <div class='col-8'>
-                        In this research, the primary objective is to investigate the effect of elimination of non linear activation in the
-                        DNN in terms of robustness. We have shown that the linear neural network is vulnerable to adversarial attacks.
-                    </div>
+                </article>
 
-                    <div class='col-12 mt-4'>
-                        <h3>Security Threat in Source Free Domain Adaptation</h3>
+                <article class="project">
+                    <h3>Adaptive Real Time Object Detection using advance optical flow algorithm</h3>
+                    <div class="row g-4 align-items-start">
+                        <div class="col-md-4 project-figure">
+                            <img src="/assets/img_papers/traffic.jpg" alt="Traffic scene used for real-time object detection" data-holder-rendered="true">
+                        </div>
+                        <div class="col-md-8 project-body">
+                            We are developing a real-time object detection system that can adapt to changes in the environment. We are using optical flow to detect changes in the environment, and then using this information to adapt the object detection model to the new environment.
+                        </div>
                     </div>
-                    <div class='col-4'>
-                        <img class="rounded shadow img-fluid border" src="/assets/img_papers/triggerless-backdoor-1.webp" data-holder-rendered="true">
+                </article>
+
+                <article class="project">
+                    <h3>Investigating Linear Neural Network’s Vulnerability</h3>
+                    <div class="row g-4 align-items-start">
+                        <div class="col-md-4 project-figure">
+                            <img src="/assets/img_papers/neural_networks_comparison.png" alt="Comparison of neural network architectures" data-holder-rendered="true">
+                        </div>
+                        <div class="col-md-8 project-body">
+                            In this research, the primary objective is to investigate the effect of elimination of non linear activation in the
+                            DNN in terms of robustness. We have shown that the linear neural network is vulnerable to adversarial attacks.
+                        </div>
                     </div>
-                    <div class='col-8'>
-                        We investigated the effect of a source adversary which may inject a hidden malicious behavior
-                        (Backdoor/Trojan) during source training and potentially transfer it to the target domain even after benign
-                        training by the victim (target do-main owner). We also built a defense method for the attack as well.
+                </article>
+
+                <article class="project">
+                    <h3>Security Threat in Source Free Domain Adaptation</h3>
+                    <div class="row g-4 align-items-start">
+                        <div class="col-md-4 project-figure">
+                            <img src="/assets/img_papers/triggerless-backdoor-1.webp" alt="Triggerless backdoor attack illustration" data-holder-rendered="true">
+                        </div>
+                        <div class="col-md-8 project-body">
+                            We investigated the effect of a source adversary which may inject a hidden malicious behavior
+                            (Backdoor/Trojan) during source training and potentially transfer it to the target domain even after benign
+                            training by the victim (target do-main owner). We also built a defense method for the attack as well.
+                        </div>
                     </div>
-                    <div class='col-12 mt-4'>
-                        <h3>Weight Pruning</h3>
+                </article>
+
+                <article class="project">
+                    <h3>Weight Pruning</h3>
+                    <div class="row g-4 align-items-start">
+                        <div class="col-md-4 project-figure">
+                            <img src="/assets/img_papers/prunning.png" alt="Weight pruning illustration" data-holder-rendered="true">
+                        </div>
+                        <div class="col-md-8 project-body">
+                            We investigated the effect of weight pruning in unsupervised learning setup. We also proposed a weight
+                            perturbation method. We showed that the weight pruning is very effective in unsupervised learning setup.
+                        </div>
                     </div>
-                    <div class='col-4'>
-                        <img class="rounded shadow img-fluid border" src="/assets/img_papers/prunning.png" data-holder-rendered="true">
+                </article>
+
+                <article class="project">
+                    <h3>Local features detection using 3D point cloud</h3>
+                    <div class="row g-4 align-items-start">
+                        <div class="col-md-4 project-figure">
+                            <img src="/assets/img_papers/3D-point-cloud-of-the-face.png" alt="3D point cloud of a face" data-holder-rendered="true">
+                        </div>
+                        <div class="col-md-8 project-body">
+                            We built a pipeline to detect local features using 3D point cloud. The pipeline consists of Kmeans clustering
+                            algorithm to first segment the point cloud and then we used the Gaussian Mixture Model to get the local features.
+                            We then ran the pipeline on the 3D point cloud of the face and got the local features.
+                        </div>
                     </div>
-                    <div class='col-8'>
-                        We investigated the effect of weight pruning in unsupervised learning setup. We also proposed a weight
-                        perturbation method. We showed that the weight pruning is very effective in unsupervised learning setup.
-                    </div>
-                    <div class='col-12 mt-4'>
-                        <h3>Local features detection using 3D point cloud</h3>
-                    </div>
-                    <div class='col-4'>
-                        <img class="rounded shadow img-fluid border" src="/assets/img_papers/3D-point-cloud-of-the-face.png" data-holder-rendered="true">
-                    </div>
-                    <div class='col-8'>
-                        We built a pipeline to detect local features using 3D point cloud. The pipeline consists of Kmeans clustering
-                        algorithm to first segment the point cloud and then we used the Gaussian Mixture Model to get the local features.
-                        We then ran the pipeline on the 3D point cloud of the face and got the local features.
-                    </div>
+                </article>
 
             </div>
         </main>
