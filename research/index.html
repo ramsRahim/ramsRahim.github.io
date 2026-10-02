@@ -151,14 +151,9 @@
                             <img src="/assets/img_papers/tda-l(v4).drawio.png" alt="TDA-L architecture diagram" data-holder-rendered="true">
                         </div>
                         <div class="col-md-8 project-body">
-                            Vision–language models learn visual concepts from the supervision of natural language.
-                            It can significantly enhance the generalizability of real-time intelligent sensing, such as analyzing camera-captured real-time images for visually impaired users.
-                            However, adapting vision–language models to distribution shifts at test time, caused by several factors such as lighting or weather changes, remains challenging.
-                            In particular, most existing test-time adaptation methods rely on gradient-based fine-tuning and backpropagation, making them computationally expensive and unsuitable for real-time applications.
-                            To address this challenge, the Training-Free Dynamic Adapter (TDA) has recently been introduced as a lightweight alternative that uses a dynamic key–value cache and pseudo-label refinement for test-time adaptation without backpropagation.
-                            Building on this, we propose TDA-L, a new framework that integrates Low-Rank Adaptation (LoRA) to reduce the size of feature representations and related computational overhead at test time using pre-learned low-rank matrices.
-                            TDA-L applies LoRA transformations to both query and cached features during inference, cost-efficiently improving robustness to distribution shifts while maintaining the training-free nature of TDA.
-                            Experimental results on seven benchmarks show that TDA-L maintains accuracy but achieves lower latency, less memory consumption, and higher throughput, making it well-suited for AI-based real-time sensing.
+                            Adapting vision–language models to test-time distribution shifts, such as lighting or weather changes, usually relies on backpropagation, which is too slow for real-time sensing.
+                            Building on the training-free, cache-based TDA adapter, TDA-L applies pre-learned Low-Rank Adaptation (LoRA) matrices to query and cached features to shrink their size at inference.
+                            Across seven benchmarks, TDA-L maintains accuracy while lowering latency and memory use and increasing throughput. Published in <i>Sensors</i>.
                         </div>
                     </div>
                 </article>
