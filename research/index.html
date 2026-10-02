@@ -85,18 +85,15 @@
         <main class="flex-shrink-1 mb-5">
             <div class="container pt-4" style="max-width:1000px;">
                 <h1>Research</h1>
-                <p>My academic journey at Binghamton University has been a transformative exploration in deep learning
-                    and IoT. As I delved into this rapidly progressing field, I identified a burgeoning challenge: the increasing
-                    security risks inherent in deep learning technologies. This realization spurred me to investigate these vulnerabilities,
-                    leading to a collaborative research effort. Our findings were encapsulated in the paper “Secure
-                    Source Free Domain Adaptation,” which I had the honor of co-authoring. This paper was subsequently
-                    presented at the International Conference on Computer Vision (ICCV), a highly respected conference in our
-                    field.</p>
+                <p>I am an applied machine learning researcher and Computer Science PhD candidate at Binghamton University (SUNY),
+                    working in the RT Lab under Prof. Kyoung-Don Kang. My research focuses on multimodal retrieval and vision-language models,
+                    with an emphasis on making frozen models more accurate, robust, and efficient without costly retraining.
+                    As an Applied Research Intern on eBay's Ads team, I fine-tuned BLIP with visual-grounding late interaction for fashion product retrieval,
+                    developed LoCaR, a training-free framework for localized retrieval with frozen backbones, and built LOCFG, a leakage-controlled benchmark for small-referent retrieval.</p>
 
-                <p>In addition to this research, my Master’s thesis is centered around the development of real-time data
-                    analytics, where I have incorporated Real Time Object Detection using raspberry pi. The system is being used to detect spotted lantern fly in the wild.
-                    Alongside these endeavors, I took the opportunity to further refine my smart stick project, initially developed during my undergraduate studies. For the
-                    Introduction to IoT course, I evolved the project, now named "Third Eye," by integrating continuous connectivity using LoRa technology.</p>
+                <p>My broader work covers reliability under distribution shift: post-hoc out-of-distribution detection with LSF, efficient test-time adaptation (<i>Sensors</i>),
+                    and robust edge AI for insect pest monitoring over LoRa networks (ICDCN 2027). I have also worked on security in source-free domain adaptation (ICCV 2023)
+                    and unsupervised learning (IJCNN 2021), and previously built long-context summarization models as a Research Scientist at Cobalt Speech &amp; Language.</p>
 
                 <hr>
 
@@ -129,21 +126,7 @@
                     </div>
                 </article>
 
-                <article class="project">
-                    <h3>WASP: Edge-AI Insect Pest Monitoring in Challenging Environments</h3>
-                    <div class="row g-4 align-items-start">
-                        <div class="col-md-4 project-figure">
-                            <img src="/assets/img_papers/wasp_rpccl.png" alt="RPCCL three-stage curriculum overview" data-holder-rendered="true">
-                        </div>
-                        <div class="col-md-8 project-body">
-                            Field-deployed pest monitors face two coupled problems: lightweight classifiers lose accuracy under rain, fog, glare, and low light, and LoRaWAN links become unreliable in dense vegetation.
-                            WASP addresses both. RPCCL (Randomized Progressive Curriculum Contrastive Learning) trains lightweight models through a three-stage curriculum that increases corruption severity and diversity, with random sampling within each stage, at no extra inference cost.
-                            LA-ADR (Location-Aware Adaptive Data Rate) uses line-of-sight, vegetation density, and clustering to assign LoRa data rates.
-                            Across benchmark corruptions, ns-3 simulations, and a 10-node forest deployment, WASP improves both classification robustness and packet reception. Accepted at ICDCN 2027.
-                        </div>
-                    </div>
-                </article>
-                
+               
                 <article class="project">
                     <h3>Efficient Test Time Adaptation</h3>
                     <div class="row g-4 align-items-start">
@@ -165,22 +148,28 @@
                             <img src="/assets/img_papers/SLF.png" alt="Spotted Lanternfly detection system" data-holder-rendered="true">
                         </div>
                         <div class="col-md-8 project-body">
-                            Detecting invasive species like the Spotted Lanternfly (SLF) in remote and hard-to-reach places such as tree
-                            branches or tall building walls is labor-intensive and leads to significant crop
-                            losses. To tackle this, we developed a new system, a Deep Neural Network (DNN)
-                            architecture that incorporates MobileNet V3, optimized for low-power devices and
-                            trained on a dedicated SLF dataset. Deployed on a Raspberry Pi Model B with a
-                            LoRa module, our system is energy-efficient and operates effectively on edge devices
-                            with limited computational resources through quantization, achieving high accuracy
-                            and low latency for detection. Our results demonstrate that our system covers a
-                            larger area and consumes significantly less power than other network technologies
-                            such as WiFi and Bluetooth, making it a superior solution for managing invasive
-                            species in expansive, resource-limited environments
+                            For my Master's thesis, I built an energy-efficient system for detecting Spotted Lanternflies (SLF), an invasive pest that is hard to monitor in remote spots such as tree branches.
+                            A quantized MobileNetV3 model trained on a dedicated SLF dataset runs on a Raspberry Pi with a LoRa module, achieving high accuracy and low latency on the device.
+                            Compared with WiFi and Bluetooth, the LoRa-based system covers a larger area while using significantly less power.
                         </div>
                     </div>
                 </article>
 
                 <article class="project">
+                    <h3>WASP: Edge-AI Insect Pest Monitoring in Challenging Environments</h3>
+                    <div class="row g-4 align-items-start">
+                        <div class="col-md-4 project-figure">
+                            <img src="/assets/img_papers/wasp_rpccl.png" alt="RPCCL three-stage curriculum overview" data-holder-rendered="true">
+                        </div>
+                        <div class="col-md-8 project-body">
+                            Field-deployed pest monitors face two coupled problems: lightweight classifiers lose accuracy under rain, fog, glare, and low light, and LoRaWAN links become unreliable in dense vegetation.
+                            WASP addresses both. RPCCL (Randomized Progressive Curriculum Contrastive Learning) trains lightweight models through a three-stage curriculum that increases corruption severity and diversity, with random sampling within each stage, at no extra inference cost.
+                            LA-ADR (Location-Aware Adaptive Data Rate) uses line-of-sight, vegetation density, and clustering to assign LoRa data rates.
+                            Across benchmark corruptions, ns-3 simulations, and a 10-node forest deployment, WASP improves both classification robustness and packet reception. Accepted at ICDCN 2027.
+                        </div>
+                    </div>
+                </article>
+                 <article class="project">
                     <h3>Adaptive Real Time Object Detection using advance optical flow algorithm</h3>
                     <div class="row g-4 align-items-start">
                         <div class="col-md-4 project-figure">
